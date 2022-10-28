@@ -1,76 +1,101 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="dist/scripts.min.js"></script>
-      <title>Obsession Cleaning</title>
-   </head>
-   <body>
-      <header class="header">
-         <div class="container">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+
+<style>* {box-sizing: border-box;}html {font-size: 62.5%;scroll-behavior: smooth;}body {display: flex;min-height: 100vh;flex-direction: column;font: normal normal 1.6rem/1.3 "Montserrat", sans-serif;margin-top: 40px;}main {flex: 1 0 auto;}.container {margin: 0 auto;padding: 0 30px;width: 100%;max-width: 1220px;}@media screen and (min-width: 768px) {.container {padding-left: 50px;padding-right: 50px;}}.sr-only {display: none;}html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after, q:before, q:after {content: "";content: none;}table {border-collapse: collapse;border-spacing: 0;}h1, h2, h3, h4 {font-weight: bold;line-height: 1.2;margin-bottom: 20px;}@media screen and (min-width: 1024px) {h1, h2, h3, h4 {margin-bottom: 30px;}}h1 {font-size: 3rem;}h2 {font-size: 2.4rem;}h3 {font-size: 2rem;}h4 {font-size: 1.6rem;}p {font-size: 1.6rem;}p:not(:last-of-type) {margin-bottom: 20px;}ul, ol {padding-left: 15px;}ul {list-style: disc;}ol {list-style: decimal;}b, strong {font-weight: bold;}em {font-style: italic;}li {margin-bottom: 5px;}@media screen and (min-width: 768px) {li {margin-bottom: 10px;}}li:last-of-type {margin-bottom: 0;}a {transition: all 500ms ease-out;text-decoration: none;color: #000;}a:hover, a:active, a:focus {color: #59bfff;}small {font-size: 1.3rem;}button, .button, input[type="submit"], input[type="reset"] {appearance: none;transition: all 500ms ease-out;text-decoration: none;display: inline-block;border: 0;padding: 9px 11px;font-size: inherit;color: #fff;background-color: #000;cursor: pointer;}.header {background-color: #000;position: fixed;top: 0;left: 0;width: 100%;z-index: 10;}.top-nav {display: flex;justify-content: space-between;}.top-nav ul {display: flex;list-style: none;padding-left: 0;}.top-nav ul:not(.icons) {align-items: center;}.top-nav li {margin-bottom: 0;transition: all 500ms ease-out;}.top-nav li.icon {background-color: #fff;border-radius: 100%;width: 40px;height: 40px;position: relative;}.top-nav li.icon a {width: 41px;height: 41px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}.top-nav li a {color: #fff;margin-right: 15px;display: block;}@media screen and (min-width: 768px) {.top-nav li a {margin-right: 30px;}}@media screen and (max-width: 767px) {.top-nav li a span {display: none;}}.top-nav li:hover.icon, .top-nav li:active.icon, .top-nav li:focus.icon {background-color: #59bfff;}.top-nav li:hover a, .top-nav li:active a, .top-nav li:focus a {color: #59bfff;}#tel-no {display: none;}@media screen and (min-width: 768px) {#tel-no.js-show {display: block;}}.banner {background-color: #59bfff;margin-bottom: 30px;}@media screen and (min-width: 768px) {.banner {margin-bottom: 50px;}}@media screen and (min-width: 1024px) {.banner {margin-bottom: 80px;}}@media screen and (min-width: 1200px) {.banner {margin-bottom: 100px;}}.banner img {width: 100%;max-width: 257px;margin: 30px auto;display: block;}@media screen and (min-width: 768px) {.banner img {margin-top: 50px;margin-bottom: 50px;}}.banner a {width: 100%;text-align: center;color: #000;margin-bottom: 20px;font-size: 1.8rem;display: block;font-weight: bold;}@media screen and (min-width: 768px) {.banner a {margin-bottom: 50px;font-size: 2rem;}}.intro {margin-bottom: 30px;max-width: 600px;margin-left: auto;margin-right: auto;}@media screen and (min-width: 768px) {.intro {margin-bottom: 50px;}}@media screen and (min-width: 1024px) {.intro {margin-bottom: 80px;}}@media screen and (min-width: 1200px) {.intro {margin-bottom: 100px;}}.service {background-color: #eeefe8;margin-bottom: 30px;}@media screen and (min-width: 768px) {.service {margin-bottom: 50px;}}@media screen and (min-width: 1024px) {.service {margin-bottom: 80px;}}@media screen and (min-width: 1200px) {.service {margin-bottom: 100px;}}@media screen and (min-width: 768px) {.service {display: flex;flex-wrap: wrap;}}@media screen and (min-width: 1200px) {.service {align-items: center;}}.service__content {padding: 30px;}@media screen and (min-width: 768px) {.service__content {padding: 50px;}}@media screen and (min-width: 768px) {.service__content {width: 50%;}}.service__content .pricing {margin-top: 20px;}.service__image {overflow: hidden;position: relative;}@media screen and (max-width: 767px) {.service__image {height: 230px;}}@media screen and (min-width: 768px) {.service__image {width: 50%;}}@media screen and (min-width: 1200px) {.service__image {height: 500px;}}.service__image img {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit: cover;}.service:nth-child(odd) .service__content {order: 1;}.service:nth-child(odd) .service__image {order: 0;}.trusted-products {margin-bottom: 30px;}@media screen and (min-width: 768px) {.trusted-products {margin-bottom: 50px;}}@media screen and (min-width: 1024px) {.trusted-products {margin-bottom: 80px;}}@media screen and (min-width: 1200px) {.trusted-products {margin-bottom: 100px;}}.trusted-products ul {list-style: none;padding-left: 0;display: flex;flex-wrap: wrap;align-items: center;}.trusted-products ul li {width: 50%;display: flex;justify-content: center;align-items: center;margin-bottom: 0;}@media screen and (min-width: 1024px) {.trusted-products ul li {width: 25%;}}@media screen and (min-width: 768px) and (max-width: 1023px) {.trusted-products ul li:nth-last-child(-n+2) {margin-top: 10px;}}.trusted-products ul img {width: 100%;max-width: 90px;}@media screen and (min-width: 1024px) {.trusted-products ul img {max-width: 120px;}}.footer {background-color: #000;width: 100%;padding: 30px;}@media screen and (min-width: 768px) {.footer {padding: 50px;}}@media screen and (min-width: 768px) {.footer {padding-top: 20px;padding-bottom: 20px;}}.footer p, .footer a {color: #fff;}.footer p {text-align: center;}.footer a {text-decoration: underline;}</style>
+
+<script>
+    window.addEventListener("scroll", function () {
+        var elementTarget = document.getElementById("banner");
+        if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+            var element = document.getElementById("tel-no");
+            element.classList.add("js-show");
+        } else {
+            var element = document.getElementById("tel-no");
+            element.classList.remove("js-show");
+        }
+    });
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="dist/scripts.min.js"></script>
+    <title>Obsession Cleaning</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
             <nav class="top-nav" id="top-nav">
-               <ul>
-                  <li><a href="#intro"><span>Back to </span>Top</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#" target="_blank">Contact</a></li>
-                  <li id="tel-no"><a href="tel:+447514934064">07514 934064</a></li>
-               </ul>
-               <ul>
-                  <li class="icon"><a href="#"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZGF0YS1uYW1lPSJMYXllciAxIiBpZD0iTGF5ZXJfMSIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48cGF0aCBkPSJNMjU2LDBDMTE0LjYxNSwwLDAsMTE0LjYxNSwwLDI1NlMxMTQuNjE1LDUxMiwyNTYsNTEyLDUxMiwzOTcuMzg1LDUxMiwyNTYsMzk3LjM4NSwwLDI1NiwwWm02Ny41OSwxNTMuNDI4cy0yNi4xOTQtMi4wNjQtMzYuNTEzLDEuNzQ2Yy0xNy4wNTYsNi4zLTE3LjQ2MiwyMS4wMzQtMTcuNDYyLDM1LjA4NHYyOC42OTRoNTIuMTQ5bC03LjYyLDU0Ljg4OEgyNjkuNjE1VjQwOS4zMzNoLTU4LjlWMjczLjg0SDE2MS43NDRWMjE4Ljk1Mmg0OC45NzRWMTcyLjRjMC00OS4yOTIsMzcuOTQyLTY3LjE1MSw2MC41NjMtNjkuMjk0czUyLjMwOSw0LjI4Niw1Mi4zMDksNC4yODZaIi8+PC9zdmc+" alt="Facebook Logo" title="Facebook Logo"><span class="sr-only">Facebook Link</span></a></li>
-               </ul>
+                <ul>
+                    <li><a href="#intro"><span>Back to </span>Top</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#" target="_blank">Contact</a></li>
+                    <li id="tel-no"><a href="tel:+447514934064">07514 934064</a></li>
+                </ul>
+                <ul>
+                    <li class="icon"><a href="#"><img
+                                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZGF0YS1uYW1lPSJMYXllciAxIiBpZD0iTGF5ZXJfMSIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48cGF0aCBkPSJNMjU2LDBDMTE0LjYxNSwwLDAsMTE0LjYxNSwwLDI1NlMxMTQuNjE1LDUxMiwyNTYsNTEyLDUxMiwzOTcuMzg1LDUxMiwyNTYsMzk3LjM4NSwwLDI1NiwwWm02Ny41OSwxNTMuNDI4cy0yNi4xOTQtMi4wNjQtMzYuNTEzLDEuNzQ2Yy0xNy4wNTYsNi4zLTE3LjQ2MiwyMS4wMzQtMTcuNDYyLDM1LjA4NHYyOC42OTRoNTIuMTQ5bC03LjYyLDU0Ljg4OEgyNjkuNjE1VjQwOS4zMzNoLTU4LjlWMjczLjg0SDE2MS43NDRWMjE4Ljk1Mmg0OC45NzRWMTcyLjRjMC00OS4yOTIsMzcuOTQyLTY3LjE1MSw2MC41NjMtNjkuMjk0czUyLjMwOSw0LjI4Niw1Mi4zMDksNC4yODZaIi8+PC9zdmc+"
+                                alt="Facebook Logo" title="Facebook Logo"><span class="sr-only">Facebook Link</span></a>
+                    </li>
+                </ul>
             </nav>
-         </div>
-      </header>
-      <div class="banner" id="banner">
-         <div class="container">
-            <img src="images/logo.png" alt="Obession Cleaning Logo" title="Obession Cleaning Logo">
+        </div>
+    </header>
+    <div class="banner" id="banner">
+        <div class="container">
+            <img src="/logo.png" alt="Obession Cleaning Logo" title="Obession Cleaning Logo">
             <a href="tel:+447514934064">07514 934064</a>
-         </div>
-      </div>
-      <main class="site-content container">
-         <div class="intro" id="intro">
+        </div>
+    </div>
+    <main class="site-content container">
+        <div class="intro" id="intro">
             <h1>Obsession Cleaning</h1>
-            <p>We are a Professional Window Cleaning Business based in Cornwall with multiple years experience working on a wide variety of properties.</p>
-         </div>
-         <div class="services" id="services">
-         <h2>Services</h2>
-         <div class="service" id="residential_properties">
-            <div class="service__content">
-               <h3>Residential Properties</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus elit massa, a accumsan lacus ultricies ac. Etiam aliquam diam nec lectus posuere porta
-               <p>
+            <p>We are a Professional Window Cleaning Business based in Cornwall with multiple years experience working
+                on a wide variety of properties.</p>
+        </div>
+        <div class="services" id="services">
+            <h2>Services</h2>
+            <div class="service" id="residential_properties">
+                <div class="service__content">
+                    <h3>Residential Properties</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus elit massa, a accumsan
+                        lacus ultricies ac. Etiam aliquam diam nec lectus posuere porta
+                    <p>
+                </div>
+                <div class="service__image">
+                    <img src="images/residential-properties.JPEG" alt="Obession Cleaning - Residential Properties">
+                </div>
             </div>
-            <div class="service__image">
-               <img src="images/residential-properties.JPEG"
-                  alt="Obession Cleaning - Residential Properties">
+            <div class="service" id="holiday_rental_properties">
+                <div class="service__content">
+                    <h3>Holiday Rental Properties</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus elit massa, a accumsan
+                        lacus ultricies ac. Etiam aliquam diam nec lectus posuere porta
+                    <p>
+                </div>
+                <div class="service__image">
+                    <img src="images/holiday-rental-properties.JPEG"
+                        alt="Obession Cleaning - Holiday Rental Properties">
+                </div>
             </div>
-         </div>
-         <div class="service" id="holiday_rental_properties">
-            <div class="service__content">
-               <h3>Holiday Rental Properties</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus elit massa, a accumsan lacus ultricies ac. Etiam aliquam diam nec lectus posuere porta
-               <p>
+            <div class="service" id="commercial_properties">
+                <div class="service__content">
+                    <h3>Commercial Properties</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus elit massa, a accumsan
+                        lacus ultricies ac. Etiam aliquam diam nec lectus posuere porta
+                    <p>
+                </div>
+                <div class="service__image">
+                    <img src="images/commercial-properties.JPEG" alt="Obession Cleaning - Commercial Properties">
+                </div>
             </div>
-            <div class="service__image">
-               <img src="images/holiday-rental-properties.JPEG"
-                  alt="Obession Cleaning - Holiday Rental Properties">
-            </div>
-         </div>
-         <div class="service" id="commercial_properties">
-            <div class="service__content">
-               <h3>Commercial Properties</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus elit massa, a accumsan lacus ultricies ac. Etiam aliquam diam nec lectus posuere porta
-               <p>
-            </div>
-            <div class="service__image">
-               <img src="images/commercial-properties.JPEG"
-                  alt="Obession Cleaning - Commercial Properties">
-            </div>
-         </div>
-      </main>
-      <footer class="footer">
-         <p>Copyright © 2022 Obsession Cleaning</p>
-      </footer>
-   </body>
+    </main>
+    <footer class="footer">
+        <p>Copyright © 2022 Obsession Cleaning</p>
+    </footer>
+</body>
+
 </html>
